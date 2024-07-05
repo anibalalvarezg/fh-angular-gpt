@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard-layout',
+  selector: 'app-orthography-page',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: './DashboardLayout.component.html',
+  templateUrl: './orthographyPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardLayoutComponent { }
+export default class OrthographyPageComponent { }

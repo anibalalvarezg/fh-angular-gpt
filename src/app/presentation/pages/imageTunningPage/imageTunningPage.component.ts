@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pros-cons-page',
+  selector: 'app-image-tunning-page',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: './prosConsPage.component.html',
+  templateUrl: './imageTunningPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProsConsPageComponent { }
+export default class ImageTunningPageComponent { }

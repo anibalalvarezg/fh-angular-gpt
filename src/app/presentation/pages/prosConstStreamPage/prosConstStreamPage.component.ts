@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-audio-to-text-page',
+  selector: 'app-pros-const-stream-page',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: './audioToTextPage.component.html',
+  templateUrl: './prosConstStreamPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AudioToTextPageComponent { }
+export default class ProsConstStreamPageComponent { }
