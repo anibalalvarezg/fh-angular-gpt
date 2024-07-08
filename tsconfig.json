@@ -21,7 +21,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["app/presentation/components/*"],
+      "@use-cases/*": ["app/core/use-cases/*"],
+      "@interfaces/*": ["app/interfaces/components/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
