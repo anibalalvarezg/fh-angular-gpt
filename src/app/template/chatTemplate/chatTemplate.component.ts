@@ -1,36 +1,38 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  signal,
+} from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import {
+  TextMessageEvent,
+  TextMessageBoxEvent,
   ChatMessageComponent,
   MyMessageComponent,
-  TextMessageBoxComponent,
-  TextMessageBoxEvent,
-  TextMessageBoxFileComponent,
-  TextMessageBoxSelectComponent,
-  TextMessageEvent,
   TypingLoaderComponent,
+  TextMessageBoxComponent,
 } from '@components/index';
 import { Message } from 'app/interfaces';
 import { OpenAiService } from 'app/presentation/services/openai.service';
 
 @Component({
-  selector: 'app-orthography-page',
+  selector: 'app-chat-template',
   standalone: true,
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ChatMessageComponent,
     MyMessageComponent,
     TypingLoaderComponent,
     TextMessageBoxComponent,
-    TextMessageBoxSelectComponent,
-    TextMessageBoxFileComponent,
   ],
-  templateUrl: './orthographyPage.component.html',
+  templateUrl: './chatTemplate.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class OrthographyPageComponent {
-
-  messages = signal<Message[]>([{text: 'hola mundo', isGpt: false }]);
+export class ChatTemplateComponent {
+  messages = signal<Message[]>([]);
   isLoading = signal(false);
   openAiService = inject(OpenAiService);
 
